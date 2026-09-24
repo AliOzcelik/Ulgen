@@ -1,0 +1,21 @@
+{
+  "_comment": "Tokenizers to compare. type: local_sp | local_hf | hf_json | tiktoken. Local paths are relative to this dashboard/ folder. Gated HF repos (Llama/Gemma/Mistral) need `hf auth login`; if unavailable they are skipped automatically.",
+  "tokenizers": [
+    { "name": "Mine 32k (local)", "type": "local_sp", "path": "../tokenizers/turkish-unigram-32k/tr_unigram_32k.model", "mine": true },
+    { "name": "Mine 48k (local)", "type": "local_sp", "path": "../tokenizers/turkish-unigram-48k/tr_unigram_48k.model", "mine": true },
+    { "name": "Mine 64k (local)", "type": "local_sp", "path": "../tokenizers/turkish-unigram-64k/tr_unigram_64k.model", "mine": true },
+
+    { "name": "BERTurk (tr, 32k)",        "type": "hf_json", "repo": "dbmdz/bert-base-turkish-cased" },
+    { "name": "mBERT (multilingual)",     "type": "hf_json", "repo": "google-bert/bert-base-multilingual-cased" },
+    { "name": "XLM-R (multilingual 250k)","type": "hf_json", "repo": "FacebookAI/xlm-roberta-base" },
+
+    { "name": "Qwen2.5 (151k)",           "type": "hf_json", "repo": "Qwen/Qwen2.5-7B" },
+    { "name": "Llama 3.2 (128k)",         "type": "hf_json", "repo": "meta-llama/Llama-3.2-3B-Instruct", "gated": true },
+    { "name": "Gemma 3 (262k)",           "type": "hf_json", "repo": "google/gemma-3-12b-it",            "gated": true },
+    { "name": "Mistral v0.3 (32k)",       "type": "hf_json", "repo": "mistralai/Mistral-7B-v0.3",        "gated": true },
+
+    { "name": "GPT-OSS / GPT-4o (o200k)", "type": "tiktoken", "encoding": "o200k_base" },
+    { "name": "GPT-4/3.5 (cl100k)",       "type": "tiktoken", "encoding": "cl100k_base" },
+    { "name": "GPT-2 (en, 50k)",          "type": "hf_json", "repo": "openai-community/gpt2" }
+  ]
+}

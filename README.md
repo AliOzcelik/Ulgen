@@ -4,6 +4,10 @@ Turkish specific, from scratch LLM with its own trained tokenizer; with the goal
 
 ## Tokenizers
 
+![Ülgen tokenizer dashboard — token-count bar chart plus the colored token stream for each model](images/dashboard-1.png)
+
+![Resulting tokens per model — the same Turkish sentence tokenized by every model; general LLM tokenizers split Turkish into far more pieces](images/dashboard-2.png)
+
 Turkish **SentencePiece Unigram** tokenizers trained on the
 [vngrs-web-corpus](https://huggingface.co/datasets/vngrs-ai/vngrs-web-corpus)
 (cleaned Turkish OSCAR + mC4), exported to HuggingFace format. Shared config:
@@ -51,10 +55,6 @@ that tokenizes a sentence you type with **every tokenizer at once** — the thre
 ones above plus open LLM tokenizers (BERTurk, XLM-R, Qwen, Llama 3, Gemma 3, GPT-2,
 GPT-4o/o200k, …) — and shows a **bar chart of token counts** and the **colored token
 stream** per model. It has a light/dark toggle and a PNG export for reports.
-
-![Ülgen tokenizer dashboard — token-count bar chart plus the colored token stream for each model](images/dashboard-1.png)
-
-![Resulting tokens per model — the same Turkish sentence tokenized by every model; general LLM tokenizers split Turkish into far more pieces](images/dashboard-2.png)
 
 ```bash
 cd dashboard

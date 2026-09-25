@@ -52,6 +52,10 @@ ones above plus open LLM tokenizers (BERTurk, XLM-R, Qwen, Llama 3, Gemma 3, GPT
 GPT-4o/o200k, …) — and shows a **bar chart of token counts** and the **colored token
 stream** per model. It has a light/dark toggle and a PNG export for reports.
 
+![Ülgen tokenizer dashboard — token-count bar chart plus the colored token stream for each model](images/dashboard-1.png)
+
+![Resulting tokens per model — the same Turkish sentence tokenized by every model; general LLM tokenizers split Turkish into far more pieces](images/dashboard-2.png)
+
 ```bash
 cd dashboard
 pip install flask tokenizers sentencepiece huggingface_hub tiktoken
